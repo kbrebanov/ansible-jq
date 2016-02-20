@@ -1,6 +1,8 @@
 jq
 ==
 
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-jq.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-jq)
+
 Installs jq.
 
 Requirements
