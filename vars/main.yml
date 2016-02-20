@@ -1,2 +1,5 @@
 ---
 # vars file for jq
+
+jq_packages:
+  - jq

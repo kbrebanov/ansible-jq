@@ -1,11 +1,13 @@
 ---
 galaxy_info:
-  author: your name
-  description: 
-  company: your company (optional)
+  author: Kevin Brebanov
+  description: Installs jq
+  company:
+
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
+
   # Some suggested licenses:
   # - BSD (default)
   # - MIT
@@ -13,14 +15,24 @@ galaxy_info:
   # - GPLv3
   # - Apache
   # - CC-BY
-  license: license (GPLv2, CC-BY, etc)
-  min_ansible_version: 1.2
+  license: BSD
+
+  min_ansible_version: 1.9
+
+  # Optionally specify the branch Galaxy will use when accessing the GitHub
+  # repo for this role. During role install, if no tags are available,
+  # Galaxy will use this branch. During import Galaxy will access files on
+  # this branch. If travis integration is cofigured, only notification for this
+  # branch will be accepted. Otherwise, in all cases, the repo's default branch
+  # (usually master) will be used.
+  github_branch: master
+
   #
   # Below are all platforms currently available. Just uncomment
-  # the ones that apply to your role. If you don't see your 
+  # the ones that apply to your role. If you don't see your
   # platform on this list, let us know and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: EL
   #  versions:
   #  - all
@@ -31,6 +43,14 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
+  #- name: Solaris
+  #  versions:
+  #  - all
+  #  - 10
+  #  - 11.0
+  #  - 11.1
+  #  - 11.2
+  #  - 11.3
   #- name: Fedora
   #  versions:
   #  - all
@@ -41,6 +61,7 @@ galaxy_info:
   #  - 20
   #  - 21
   #  - 22
+  #  - 23
   #- name: Windows
   #  versions:
   #  - all
@@ -78,8 +99,12 @@ galaxy_info:
   #  - 9.1
   #  - 9.1
   #  - 9.2
-  #- name: Ubuntu
-  #  versions:
+  #  - 9.3
+  #  - 10.0
+  #  - 10.1
+  #  - 10.2
+  - name: Ubuntu
+    versions:
   #  - all
   #  - lucid
   #  - maverick
@@ -89,9 +114,10 @@ galaxy_info:
   #  - quantal
   #  - raring
   #  - saucy
-  #  - trusty
+    - trusty
   #  - utopic
   #  - vivid
+  #  - wily
   #- name: SLES
   #  versions:
   #  - all
@@ -113,27 +139,19 @@ galaxy_info:
   #  - lenny
   #  - squeeze
   #  - wheezy
-  #
-  # Below are all categories currently available. Just as with
-  # the platforms above, uncomment those that apply to your role.
-  #
-  #categories:
-  #- cloud
-  #- cloud:ec2
-  #- cloud:gce
-  #- cloud:rax
-  #- clustering
-  #- database
-  #- database:nosql
-  #- database:sql
-  #- development
-  #- monitoring
-  #- networking
-  #- packaging
-  #- system
-  #- web
+
+  galaxy_tags:
+    - development
+    - system
+    # List tags for your role here, one per line. A tag is
+    # a keyword that describes and categorizes the role.
+    # Users find roles by searching for tags. Be sure to
+    # remove the '[]' above if you add tags to this list.
+    #
+    # NOTE: A tag is limited to a single word comprised of
+    # alphanumeric characters. Maximum 20 tags per role.
+
 dependencies: []
   # List your role dependencies here, one per line.
   # Be sure to remove the '[]' above if you add dependencies
   # to this list.
-  
