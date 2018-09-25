@@ -1,2 +1,10 @@
 ---
 # tasks file for jq (CentOS specific)
+
+- name: enable EPEL Repository
+  yum: name=epel-release
+       state=present
+       
+- name: install JQ
+  yum: name=jq
+       state=present
